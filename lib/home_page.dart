@@ -30,10 +30,10 @@ class HomePage extends StatelessWidget {
           borderRadius: BorderRadius.circular(5.0),
         ),
         child: ListTile(
-          title: Text("${user.lastName} ${user.firstName}"),
+          title: Text("${user.firstName} ${user.lastName}"),
           trailing: Text(
               "${user.birthDate.day.toString()}/${user.birthDate.month.toString()}/${user.birthDate.year.toString()}"),
-          onTap: () => print(user),
+          onTap: () => user.reference.updateData({'firstName': "Bob"}),
         ),
       ),
     );
