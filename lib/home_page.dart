@@ -30,8 +30,9 @@ class HomePage extends StatelessWidget {
           borderRadius: BorderRadius.circular(5.0),
         ),
         child: ListTile(
-          title: Text(user.lastName),
-          trailing: Text(user.firstName),
+          title: Text("${user.lastName} ${user.firstName}"),
+          trailing: Text(
+              "${user.birthDate.day.toString()}/${user.birthDate.month.toString()}/${user.birthDate.year.toString()}"),
           onTap: () => print(user),
         ),
       ),
